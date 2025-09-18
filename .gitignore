@@ -1,0 +1,33 @@
+# Node / Vite
+node_modules/
+dist/
+.vite/
+*.local
+
+# Tauri / Rust
+src-tauri/target/
+src-tauri/**/.fingerprint/
+src-tauri/**/*.pdb
+src-tauri/**/*.dll
+src-tauri/**/build/
+src-tauri/.cargo/
+src-tauri/Cargo.lock
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

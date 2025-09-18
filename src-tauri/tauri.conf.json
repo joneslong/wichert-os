@@ -1,0 +1,37 @@
+{
+  "build": {
+    "beforeBuildCommand": "",
+    "beforeDevCommand": "",
+    "devPath": "http://localhost:5173",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "Wichert OS",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "shell": {
+        "all": false
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": [
+        "deb",
+        "app",
+        "msi"
+      ],
+      "identifier": "de.cwjw.wichertos",
+      "icon": []
+    },
+    "windows": [
+      {
+        "title": "Wichert OS",
+        "width": 1200,
+        "height": 800,
+        "resizable": true
+      }
+    ]
+  }
+}
