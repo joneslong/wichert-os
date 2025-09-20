@@ -1,0 +1,23 @@
+tauri starten:
+
+npm run tauri dev
+
+
+GitHub link: https://github.com/joneslong/wichert-os
+
+git update: 
+
+1. git clone https://github.com/joneslong/wichert-os
+
+2. git add .
+git commit -m "Update"
+git push
+
+
+git restore:
+git checkout v0.5
+
+
+git update:
+
+git push

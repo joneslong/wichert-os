@@ -1,37 +1,31 @@
 {
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "WichertOS",
+  "version": "0.6.1",
+  "identifier": "de.wichert.os",
+
   "build": {
-    "beforeBuildCommand": "",
-    "beforeDevCommand": "",
-    "devPath": "http://localhost:5173",
-    "distDir": "../dist"
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../dist"
   },
-  "package": {
-    "productName": "Wichert OS",
-    "version": "0.1.0"
-  },
-  "tauri": {
-    "allowlist": {
-      "shell": {
-        "all": false
-      }
-    },
-    "bundle": {
-      "active": true,
-      "targets": [
-        "deb",
-        "app",
-        "msi"
-      ],
-      "identifier": "de.cwjw.wichertos",
-      "icon": []
-    },
+
+  "app": {
     "windows": [
       {
         "title": "Wichert OS",
         "width": 1200,
         "height": 800,
-        "resizable": true
+        "resizable": true,
+        "fullscreen": false,
+        "center": true
       }
-    ]
+    ],
+    "security": {
+      "csp": null
+    }
   }
+
+  
 }
