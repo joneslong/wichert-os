@@ -1,39 +1,36 @@
-# Node
-node_modules/
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# build output
+/dist
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Build output
-dist/
-build/
-out/
-
-# Local env
-.env
-.env.local
-.env.*.local
-
-# Editor stuff
-.vscode/
+# editor settings
 .idea/
-*.swp
-*.swo
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# Tauri
-src-tauri/target/
-src-tauri/Cargo.lock
-
-# Logs
-*.log
-
-# Coverage
+# coverage (falls Tests)
 coverage/
-
-# Cache
-.cache/
-.vite/
