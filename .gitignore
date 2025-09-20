@@ -34,3 +34,16 @@ pnpm-debug.log*
 
 # coverage (falls Tests)
 coverage/
+
+# Vite/Tauri
+dist
+src-tauri/target
+**/*.log
+
+# Node
+node_modules
+
+# OS
+.DS_Store
+Thumbs.db
+
