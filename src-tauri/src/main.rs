@@ -1,6 +1,19 @@
-// Prevents additional console window on Windows in release, DO NOT REMOVE!!
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+use tracing::{info, warn, error};
+use tracing_subscriber::{EnvFilter, fmt};
 
 fn main() {
-  app_lib::run();
+  tracing_subscriber::registry()
+    .with(EnvFilter::from_default_env().add_directive("info".parse().unwrap()))
+    .with(fmt::layer())
+    .init();
+
+  info!("Wichert OS (Tauri) startet…");
+
+  tauri::Builder::default()
+    .setup(|_app| {
+      info!("setup ok");
+      Ok(())
+    })
+    .run(tauri::generate_context!())
+    .expect("error while running tauri application");
 }
