@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import { ErrorBoundary } from "@/app/ErrorBoundary";
+import { RouterProvider } from "react-router-dom";
+import { router } from "@/routes";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <ErrorBoundary>
-      <App />
-    </ErrorBoundary>
-  </React.StrictMode>
-);
+const root = document.getElementById("root");
+if (!root) {
+  document.body.innerHTML = "<pre>#root not found</pre>";
+} else {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  );
+}
